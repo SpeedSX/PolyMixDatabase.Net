@@ -251,27 +251,5 @@ namespace PolyMix.DatabaseLink
             var name = await query.ExecuteScalarAsync();
             return (string)name;
         }
-
-        //        Profit = 0,
-        //            ProfitPercent = 0,
-        //        ProfitByPercent = 1,
-        //            CommonContractorPercent = 0,
-        //                ContractorProfit = 0,
-        //            CommonMatPercent = 0,
-        //            MatProfit
-        //            MatProfitByPercent = 1,
-        //                ContractorProfitByPercent = 1,
-        //                CommonOwnPercent = 0,
-        //        OwnProfitByPercent = 1,
-        //        OwnProfit = 0
-        //            TotalOwnCostCopy = value1,
-        //        TotalContractorCostCopy = 0
-        //        TotalMatCostCopy = Value2,
-        //            TotalProfitCost = value1 + value2,
-        //            FinalOwnCost = value,
-        //            FinalContractorCost = 0,
-        //            FinalMatCost = value2,
-        //            FinalCost = value1 + value2,
-
     }
 }
