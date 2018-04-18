@@ -12,7 +12,7 @@ namespace CreateOrder
     {
         static void Main(string[] args)
         {
-            var conString = "Server=192.168.0.100;User=alexey;Password=dosia";
+            var conString = "Server=192.168.0.100;User=alexey;Password="; // PASSWORD!
             var db = new PolyMixDatabase(conString);
             var orderId = db.CreateOrder(new CreateOrderRequest
             {
@@ -20,7 +20,7 @@ namespace CreateOrder
                 Quantity = 1000,
                 FinishDate = DateTime.Now.AddDays(1),
                 IsDraft = false,
-                KindId = 31,
+                KindId = 33,
                 RowColor = 16777215,
                 OrderState = 10,
                 PayState = 3,
