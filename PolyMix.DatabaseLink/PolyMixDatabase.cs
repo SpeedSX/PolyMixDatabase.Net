@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -99,8 +100,17 @@ namespace PolyMix.DatabaseLink
                 return (bool) v ? "1" : "0";
             }
 
-            // TODO: datetime
+            if (v is float)
+            {
+                return ((float)v).ToString(CultureInfo.InvariantCulture);
+            }
 
+            if (v is decimal)
+            {
+                return ((decimal)v).ToString(CultureInfo.InvariantCulture);
+            }
+
+            // TODO: datetime
             return v.ToString();
         }
 

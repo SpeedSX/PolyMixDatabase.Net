@@ -12,7 +12,7 @@ namespace CreateOrder
     {
         static void Main(string[] args)
         {
-            var conString = "Server=192.168.0.100;User=alexey;Password="; // PASSWORD!
+            var conString = "Server=192.168.0.100;User=oksana;Password=zaza"; // PASSWORD!
             var db = new PolyMixDatabase(conString);
             var orderId = db.CreateOrder(new CreateOrderRequest
             {
